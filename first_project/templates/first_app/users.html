@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>First App</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+    </head>
+    <body>
+        <!-- <h1>Hello, this is users.html</h1>
+        <h2>Here are your records:</h2> -->
+
+        <div class="container">
+            <h1>Add User</h1>
+            <form action="" method="POST">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+
+        <!-- <div class="users">
+            {% if users %}
+                <table>
+                    <thead>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </thead>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p>NO USER FOUND</p>
+            {% endif %}
+        </div> -->
+        <!-- <h2>{{ insert_me }}</h2>
+        {{ test }} -->
+    
+        <!-- <p><img src="{% static "images/test.png" %}" alt="oh oh"></p> -->
+
+        
+    </body>
+</html>

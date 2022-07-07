@@ -1,0 +1,12 @@
+{% extends "first_app/base.html" %}
+{% load my_extras %}
+
+    {% block body_block%}
+
+    <div class="jumbotron">
+      <h1>Hello and welcome to the site!</h1>
+      {{ text|cortar:'world' }}
+      {{ number|add:"99" }}
+    </div>
+    
+    {% endblock %}
